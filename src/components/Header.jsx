@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 // rfc => Create Component
 export default function Header() {
     return (
@@ -44,22 +46,22 @@ export default function Header() {
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
               <div className="flex flex-shrink-0 items-center">
                 <h1 className="text-white text-xl md:text-2xl">
-                  Rick and Morty
+                  <Link to="/">Rick and Morty</Link>
                 </h1>
               </div>
               <div className="hidden sm:ml-6 sm:block ">
                 <div className="flex space-x-4">
-                  <a
-                    href="#"
+                  <NavLink
+                    to="/"
                     className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
                     aria-current="page">
                     Characters
-                  </a>
-                  <a
-                    href="#"
+                  </NavLink>
+                  <NavLink
+                    to="/location"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                     Locations
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>
